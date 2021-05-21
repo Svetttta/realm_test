@@ -1,0 +1,10 @@
+{
+    "name": "mongodb_service",
+    "type": "mongodb-atlas",
+    "config": {
+        "clusterName": "KW-cluster",
+        "readPreference": "primary",
+        "wireProtocolEnabled": false
+    },
+    "version": 1
+}

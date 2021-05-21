@@ -1,0 +1,7 @@
+{
+    "name": "retry_sec",
+    "value": {
+        "$numberInt": "1"
+    },
+    "from_secret": false
+}

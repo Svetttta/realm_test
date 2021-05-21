@@ -1,0 +1,5 @@
+{
+    "name": "status_collection",
+    "value": "systemid",
+    "from_secret": false
+}

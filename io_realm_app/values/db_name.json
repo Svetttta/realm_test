@@ -1,0 +1,5 @@
+{
+    "name": "db_name",
+    "value": "longhorn_poc",
+    "from_secret": false
+}
