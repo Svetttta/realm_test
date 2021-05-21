@@ -1,5 +1,5 @@
 {
-    "name": "mongodb_service",
+    "name": "mongodb-atlas",
     "type": "mongodb-atlas",
     "config": {
         "clusterName": "KW-cluster",

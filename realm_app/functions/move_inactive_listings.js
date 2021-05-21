@@ -1,6 +1,6 @@
 exports = async function() {
   console.log("Move inactive listings to history");
-  const mongodb = context.services.get("mongodb_service");
+  const mongodb = context.services.get("mongodb-atlas");
 
   try {
     await archiveInActiveListings(mongodb);
