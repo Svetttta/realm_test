@@ -24,7 +24,7 @@ async function archiveInActiveListing(mongodb, listingKey){
 
   // Find inactive listing
   const listing = await listingsCollection.findOne({"ListingKey": listingKey});
-  if(listing == null) {
+  if ( typeof listing !== 'undefined' ) {
     console.log(`Listing wasn't found in listing collection: ${listingsCollectionName}.`);
     return;
   }
