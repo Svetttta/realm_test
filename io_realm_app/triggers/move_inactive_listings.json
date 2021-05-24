@@ -2,7 +2,7 @@
     "name": "move_inactive_listings",
     "type": "SCHEDULED",
     "config": {
-        "schedule": "*/1 * * * *"
+        "schedule": "0 */1 * * *"
     },
     "function_name": "move_inactive_listings",
     "disabled": false

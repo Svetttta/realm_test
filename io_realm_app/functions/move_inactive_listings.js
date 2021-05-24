@@ -5,7 +5,7 @@ exports = async function() {
   try {
     await archiveInActiveListings(mongodb);
   } catch(ex) {
-    console.log(`Retry to move documents to history. The first try returned error: ${ex}`);
+    console.log("Retry to move documents to history. The first try returned error:" + ex);
     await sleep(getContextValue("retry_sec"));
     await archiveInActiveListings(mongodb);
   }
@@ -74,7 +74,7 @@ async function archiveInActiveListings(mongodb){
     console.log("The listings were successfully moved.");
   } catch(e){
     await session.abortTransaction();
-    console.log("The transaction was aborted due to an unexpected error: " + e);
+    throw `The transaction was aborted due to an unexpected error: ${e}`;
   } finally {
     await session.endSession();
   }

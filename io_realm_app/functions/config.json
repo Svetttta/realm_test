@@ -1,0 +1,11 @@
+[
+    {
+        "name": "move_inactive_listings",
+        "private": false
+    },
+    {
+        "name": "move_one_inactive_listing",
+        "private": true,
+        "can_evaluate": {}
+    }
+]
