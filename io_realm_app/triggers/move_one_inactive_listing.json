@@ -11,8 +11,8 @@
         "collection": "systemid",
         "service_name": "mongodb-atlas",
         "match": {
-            "fullDocument.is_active": false,
-            "fullDocument.IdType": "ListingID"
+            "fullDocument.IdType": "ListingID",
+            "fullDocument.is_active": false
         },
         "project": {},
         "full_document": true,

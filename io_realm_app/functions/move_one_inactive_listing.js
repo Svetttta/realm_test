@@ -5,11 +5,11 @@ exports = async function(changeEvent) {
   const mongodb = context.services.get("mongodb-atlas");
 
   try {
-    await archiveInActiveListing(mongodb);
+    await archiveInActiveListing(mongodb, listingKey);
   } catch(ex) {
     console.log("Retry to move documents to history. The first try returned error:" + ex);
     await sleep(getContextValue("retry_sec"));
-    await archiveInActiveListing(mongodb);
+    await archiveInActiveListing(mongodb, listingKey);
   }
 }
 
@@ -24,7 +24,7 @@ async function archiveInActiveListing(mongodb, listingKey){
 
   // Find inactive listing
   const listing = await listingsCollection.findOne({"ListingKey": listingKey});
-  if ( typeof listing === 'undefined' ) {
+  if ( listing == null) {
     console.log(`Listing wasn't found in listing collection: ${listingsCollectionName}.`);
     return;
   }
